@@ -85,6 +85,6 @@ const data = {
   ],
 };
 
-export default function StockChart() {
+
   return <Line data={data} />;
-}
+

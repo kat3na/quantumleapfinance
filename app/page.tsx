@@ -73,13 +73,13 @@ export default function HomePage() {
     {/* ✅ Buy and Sell Buttons Positioned at Bottom Center */}
     <div className="absolute bottom-30 left-20 right-0 flex justify-center gap-4 px-4">
         <button
-          onClick={() => window.location.href = '/buystock'}
+          onClick={() => window.location.href = '/Buystock'}
           className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto"
         >
           Buy Stock
         </button>
         <button
-          onClick={() => window.location.href = '/sellstock'}
+          onClick={() => window.location.href = '/Sellstock'}
           className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto"
         >
           Sell Stock

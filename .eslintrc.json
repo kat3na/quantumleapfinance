@@ -5,36 +5,42 @@
       "eslint:recommended",
       "plugin:react/recommended",
       "plugin:@next/next/recommended",
-      "plugin:tailwindcss/recommended"
+      "plugin:tailwindcss/recommended",
+      "plugin:next/recommended",
+      "plugin:@typescript-eslint/recommended"
     ],
     "plugins": [
       "react",
-      "tailwindcss",
-      "unused-imports"
+      "next",
+      "unused-imports",
+      "@typescript-eslint"
     ],
-    "rules": {
-      // React rules
-      "react/react-in-jsx-scope": "off", // No need for React import with JSX Transform in React 17+
-      "react/prop-types": "off", // Turn off PropTypes validation (you might use TypeScript)
-      "react/jsx-uses-react": "off", // No need for React import with JSX Transform
-      "react/jsx-uses-vars": "error", // Ensure variables used in JSX are properly declared
-  
-      // Next.js rules
-      "next/no-html-link-for-pages": "error", // Ensures link href points to Next.js pages
-  
-      // Tailwind CSS plugin rules
-      "tailwindcss/classnames-order": "warn", // Warn for incorrect order of Tailwind CSS classes
-      "tailwindcss/no-custom-classname": "off", // Allow custom class names
-  
-      // Miscellaneous rules
-      "unused-imports/no-unused-imports": "error", // Removes unused imports
-      "no-console": "warn", // Warn about console logs (you can change to 'error' in production)
-      "no-debugger": "warn", // Warn about debugger statements
-      "no-var": "error", // Enforce `let` and `const` over `var`
-      "prefer-const": "error", // Enforce `const` over `let` when variables are not reassigned
-      "react-hooks/rules-of-hooks": "error", // Enforce rules of hooks
-      "react-hooks/exhaustive-deps": "warn" // Ensure hooks dependencies are correct
-    },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    // React rules
+    "react/react-in-jsx-scope": "off", // No need for React import with JSX Transform in React 17+
+    "react/prop-types": "off", // Turn off PropTypes validation (you might use TypeScript)
+    "react/jsx-uses-react": "off", // No need for React import with JSX Transform
+    "react/jsx-uses-vars": "error", // Ensure variables used in JSX are properly declared
+
+    // Next.js rules
+    "next/no-html-link-for-pages": "off", // Ensures link href points to Next.js pages
+
+    // Tailwind CSS plugin rules
+    "tailwindcss/classnames-order": "off", // Warn for incorrect order of Tailwind CSS classes
+    "tailwindcss/no-custom-classname": "off", // Allow custom class names
+
+    // Miscellaneous rules
+    "unused-imports/no-unused-imports": "error", // Removes unused imports
+    "no-console": "warn", // Warn about console logs (you can change to 'error' in production)
+    "no-debugger": "warn", // Warn about debugger statements
+    "no-var": "error", // Enforce `let` and `const` over `var`
+    "prefer-const": "error", // Enforce `const` over `let` when variables are not reassigned
+    "react-hooks/rules-of-hooks": "error", // Enforce rules of hooks
+    "react-hooks/exhaustive-deps": "warn", // Ensure hooks dependencies are correct
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+  },
     "settings": {
       "react": {
         "version": "detect"

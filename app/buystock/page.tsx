@@ -17,7 +17,7 @@ const createClient = () => {
   );
 };
 
-const buystock = () => {
+const Buystock = () => {
   const [stockSymbol, setStockSymbol] = useState('');
   const [amount, setAmount] = useState(0);
   const [paymentMethod, setPaymentMethod] = useState('wallet');
@@ -239,4 +239,4 @@ const buystock = () => {
   );
 };
 
-export default buystock;
+export default Buystock;

@@ -13,7 +13,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://zlueetvjllugrwexfxqr.supabase.co',
   process.env.NEXT_PUBLIC_SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsdWVldHZqbGx1Z3J3ZXhmeHFyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDIyNzg0OCwiZXhwIjoyMDU5ODAzODQ4fQ.jVKaOvAahQQGIiUkZPHns8nHyOu69w7RUOOW3fnyGJM'
 )
-const sellstock = () => {
+const Sellstock = () => {
   const [stockSymbol, setStockSymbol] = useState('');
   const [shares, setShares] = useState(0);
   const [orderType, setOrderType] = useState('market'); // Default to Market Order
@@ -108,4 +108,4 @@ const sellstock = () => {
   );
 };
 
-export default sellstock;
+export default Sellstock;
